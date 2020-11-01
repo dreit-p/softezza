@@ -9,6 +9,17 @@
 
 @import './components/header/header.scss';
 @import './components/footer/footer.scss';
+@import './components/modals/modals.scss';
+
+/*----------  modal contents  ----------*/
+
+@import './components/modals/contents/menu.scss';
+@import './components/modals/contents/feedback.scss';
+
+
+/*----------  UI Elems  ----------*/
+
+@import './components/ui-elems/buttons.scss';
 
 
 

@@ -9,7 +9,8 @@ i {
 
 .limit {
 	--offset: 20px;
-	max-width: calc(1110px + var(--offset)*2);
+	--max-width: 1110px;
+	max-width: calc(var(--max-width) + var(--offset)*2);
 	padding: 0 var(--offset);
 	margin: auto;
 	width: 100%;

@@ -1,0 +1,72 @@
+-
+	var menuLinks = [
+		{
+			name: "Наша команда",
+			url: "#",
+			list: [],
+		},
+		{
+			name: "Получить бриф",
+			url: "#",
+			list: [],
+		},
+		{
+			name: "Услуги",
+			url: "#",
+			list: [
+				{
+					name: "Web разработка",
+					url: "#"
+				},
+				{
+					name: "Мобильные приложения",
+					url: "#"
+				},
+				{
+					name: "Графический дизайн",
+					url: "#"
+				},
+				{
+					name: "SEO",
+					url: "#"
+				},
+				{
+					name: "Чат-боты",
+					url: "#"
+				},
+			],
+		},
+		{
+			name: "Контакты",
+			url: "#",
+			list: [
+				{
+					name: "+7 (863) 123-45-67",
+					url: "callto:+78631234567"
+				},
+				{
+					name: "+1 (777) 123-45-67",
+					url: "callto:+17771234567"
+				},
+				{
+					name: "mail@softezza.ru",
+					url: "mailto:mail@softezza.ru"
+				},
+			],
+		},
+	]
+
+.menu-content-wrapper
+	.menu-items
+		each category in menuLinks
+			.category
+				a.category-name(href=category.url)!= category.name
+
+				ul.list
+					each listItem in category.list
+						li
+							a(href=listItem.url)!= listItem.name
+
+	.appeal
+		.title Есть идея или планируете партнерство?
+		a.sliding-btn(data-alt-text="Обсудить проект" data-open-modal="feedback-modal") Заполнить бриф
