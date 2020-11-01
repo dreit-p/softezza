@@ -1,4 +1,40 @@
+-
+	var links = [
+		{
+			name: "Наша команда",
+			url: "#"
+		},
+		{
+			name: "Получить бриф",
+			url: "#"
+		},
+		{
+			name: "Услуги",
+			url: "#"
+		},
+		{
+			name: "Контакты",
+			url: "#"
+		},
+	]
+
 .header-offset
 header.main-header
+	.limit
+		.logo
+			a.img
+		.inline.middle
+			nav.links
+				each link in links
+					a.link(href=link.url)!= link.name
+
+		.menu-btn
+			.action.hamburger(data-open-modal="menu-modal")
+			.action.cross(onclick="closeModals()")
+			.overflow
+				.lines
+					.line
+					.line
+					.line
 
 
