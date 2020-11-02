@@ -1,0 +1,26 @@
+.feedback-content-wrapper
+	.half
+		.title Есть идея или думаете над проектом?
+		.description
+			| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown.
+	.half
+		form.feedback-form
+			.notice
+				span.icon ❋
+				span.text необходимые поля
+			.ui-input.input-wrapper.required
+				input(placeholder="Ваше имя" required)
+			.ui-input.input-wrapper.required
+				input(placeholder="Email" required)
+			.ui-input.input-wrapper.required
+				input(placeholder="Номер телефона" required)
+			.ui-input.input-wrapper
+				input(placeholder="Бюджет")
+			.ui-input.input-wrapper.required
+				textarea(placeholder="Номер телефона" rows="4" required)
+
+			.submit-btn.chamber(data-first-text="Chamber" data-last-text="Done!") Отправить
+			br
+			br
+			.submit-btn.pop-up(data-first-text="Pop up" data-last-text="Done!") Отправить
+			.submit-btn.replacement(data-first-text="Replacement" data-last-text="Done!") Отправить

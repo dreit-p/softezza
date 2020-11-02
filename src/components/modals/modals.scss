@@ -1,5 +1,4 @@
 article.modal {
-	--header-offset: 140px;
 	pointer-events: none;
 	user-select: none;
 	opacity: 0;
@@ -37,10 +36,6 @@ article.modal {
 		.limiter {
 			min-height: 300px;
 			width: 100%;
-		}
-		form {
-			max-width: 500px;
-			margin: 20px *;
 		}
 	}
 	.content-wrapper.hidden {
