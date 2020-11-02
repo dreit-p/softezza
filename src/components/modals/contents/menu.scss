@@ -1,9 +1,21 @@
 #menu-modal {
+	display: flex;
+	align-items: center;
+	flex: 1 1 auto;
+	overflow-y: auto;
+	min-height: 0;
 	.limiter {
 		max-width: 1430px;
+		overflow: hidden;
+		flex: 1 1 auto;
+		align-self: stretch;
+		min-height: 0;
 		@media (max-height: 700px) {
-			display: block;
 			height: auto;
+		}
+		@media (max-width: 600px) {
+			height: auto;
+			max-width: 435px;
 		}
 	}
 }
@@ -15,26 +27,40 @@
 	flex-grow: 1;
 	max-height: 800px;
 	height: 100%;
-	@media (max-height: 700px) {
-		display: block;
-		height: auto;
+	@media (max-width: 600px) {
+		max-height: none;
 	}
 	.menu-items {
 		display: flex;
 		justify-content: space-around;
 		width: 100%;
+		@media (max-width: 1100px) {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto auto;
+		}
+		@media (max-width: 600px) {
+			grid-template-columns: 1fr;
+			grid-template-rows: auto;
+		}
 	}
 	.category {
 		color: var(--text-blue);
 		margin: 0 20px;
+		@media (max-width: 600px) {
+			margin: 0;
+		}
 		&-name {
 			letter-spacing: 0.5px;
 			font-size: 32px;
 			line-height: 1.32;
 			font-weight: bold;
 			text-decoration: none;
-			margin: 20px 0;
+			margin: 1.25rem 0;
 			display: inline-block;
+			@media (max-width: 600px) {
+				font-size: 28px;
+			}
 		}
 		.list {
 			font-size: 21px;
@@ -43,6 +69,9 @@
 			padding: 0;
 			margin: 0;
 			list-style: none;
+			@media (max-width: 600px) {
+				font-size: 18px;
+			}
 			a {
 				display: inline-block;
 				text-decoration: none;
