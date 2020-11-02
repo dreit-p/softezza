@@ -1,5 +1,12 @@
+body {
+	--header-offset: 140px;
+	@media (max-width: 950px) {
+		--header-offset: 105px;
+	}
+}
+
 .header-offset {
-	height: 140px;
+	height: var(--header-offset);
 }
 
 header.main-header {
@@ -7,7 +14,7 @@ header.main-header {
 	align-items: center;
 	padding-right: inherit;
 	position: fixed;
-	height: 140px;
+	height: var(--header-offset);
 	top: 0;
 	left: 0;
 	right: 0;
@@ -19,25 +26,46 @@ header.main-header {
 		box-shadow: 2px 4px 16px 0 rgba(64, 64, 64, 0.16);
 		height: 98px;
 	}
+	@media (max-width: 950px) {
+		height: 105px;
+		&.unsticked {
+			height: 80px;
+		}
+	}
 	.limit {
 		--max-width: 1775px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		--offset: 24px;
 		@media (min-width: 1250px) {
 			--offset: 30px;
 		}
 	}
 	.logo {
+		flex-basis: 380px;
+		max-width: 380px;
+		margin-right: 20px;
+		@media (max-width: 950px) {
+			flex-basis: 47vw;
+			min-width: 205px;
+		}
+
 		.img {
-			display: inline-block;
-			width: 381px;
-			height: 28px;
-			background-image: linear-gradient(to right, #0f4c81 0%, #475897 50%, #7364a8 99%);
+			display: flex;
+			align-items: center;
+			width: 100%;
+			max-height: 28px;
+			img {
+				height: 100%;
+				width: 100%;
+			}
 		}
 	}
 	.inline {
 		justify-content: flex-end;
+		width: auto;
+		flex-grow: 1;
 	}
 	.links {
 		display: flex;
@@ -50,6 +78,9 @@ header.main-header {
 		@media (min-width: 1200px) {
 			margin: * 50px;
 		}
+		@media (max-width: 950px) {
+			display: none;
+		}
 		.link {
 			font-size: 19px;
 			color: var(--text-blue);
@@ -59,6 +90,7 @@ header.main-header {
 			font-weight: 600;
 			display: inline-block;
 			margin: 0 20px;
+			white-space: nowrap;
 		}
 	}
 	.menu-btn {
