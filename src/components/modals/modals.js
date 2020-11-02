@@ -47,6 +47,7 @@
 			return false;
 		}
 		contentWrapper.classList.add('active');
+		contentWrapper.scrollTop = 0;
 		contentWrapper.classList.remove('hidden');
 		body.classList.add('show-modal');
 		window.lockScroll(true);
