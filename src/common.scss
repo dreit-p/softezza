@@ -9,7 +9,7 @@ i {
 
 .limit {
 	--offset: 20px;
-	--max-width: 1110px;
+	--max-width: 1374px;
 	max-width: calc(var(--max-width) + var(--offset)*2);
 	padding: 0 var(--offset);
 	margin: auto;
@@ -20,6 +20,19 @@ i {
 	}
 	&.wide {
 		max-width: calc(1660px + var(--offset)*2);
+	}
+}
+
+section .section-title {
+	font-weight: 900;
+	color: var(--text-blue);
+	margin: 120px * 104px;
+	font-size: 56px;
+	letter-spacing: 1.2px;
+	@media (max-width: 950px) {
+		margin: 88px * 56px;
+		font-size: 32px;
+		text-align: center;
 	}
 }
 
