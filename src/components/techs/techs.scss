@@ -17,6 +17,9 @@ section.techs {
 			grid-template-columns: auto auto;
 			margin: * 30px;
 		}
+		@media (max-width: 475px) {
+			margin: 0;
+		}
 	}
 	.technology {
 		display: flex;
