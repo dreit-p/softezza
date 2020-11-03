@@ -1,0 +1,45 @@
+-
+	var team = [
+		{
+			name: "Дмитрий Ломаш",
+			image: "../assets/images/team/lomash.jpg",
+			position: "CTO"
+		},
+		{
+			name: " Евгений Копий",
+			image: "../assets/images/team/kopiy.jpg",
+			position: "Project Manager"
+		},
+		{
+			name: "Александр Казьмин",
+			image: "../assets/images/team/kazmin.jpg",
+			position: "UX/UI Designer"
+		},
+		{
+			name: "Name Surname",
+			image: "../assets/images/team/noname1.jpg",
+			position: "SEO Engineer"
+		},
+		{
+			name: "Name Surname",
+			image: "../assets/images/team/noname2.jpg",
+			position: "Frontend Developer"
+		},
+		{
+			name: "Владимир Алтухов",
+			image: "../assets/images/team/altukhov.jpg",
+			position: "Backend Developer"
+		},
+	]
+
+section.team
+	.limit
+		.section-title Кто мы
+
+		.list-wrapper
+			each person in team
+				.person
+					.person-image
+						img(src=person.image alt=`${person.name} - ${person.position}`)
+					.person-name!= person.name
+					.person-position!= person.position
