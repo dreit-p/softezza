@@ -4,22 +4,22 @@ section.possibilities {
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: auto;
 		column-gap: 20px;
-		row-gap: 24px;
+		row-gap: 10.917vw; /* 150/1374*100 */
+		@media (min-width: 1374px) {
+			row-gap: 150px;
+		}
 		@media (max-width: 950px) {
 			grid-template-columns: 1fr 1fr;
 			column-gap: 30px;
 		}
 		@media (max-width: 650px) {
+			row-gap: 4.2667vw; /* 16px/375px*100 */
 			grid-template-columns: auto;
 			justify-content: center;
 			align-content: center;
 		}
 	}
 	.category {
-		min-height: 24.5269vw; /* 337/1374*100 */
-		@media (min-width: 1374px) {
-			min-height: 337px;
-		}
 		max-width: 430px;
 		&-name {
 			font-size: 32px;
