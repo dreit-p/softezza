@@ -9,17 +9,17 @@
 				span.icon ❋
 				span.text необходимые поля
 			.ui-input.input-wrapper.required
-				input(placeholder="Ваше имя" required)
+				input(placeholder="Ваше имя" required pattern="[A-Za-zА-Яа-я -]+")
 			.ui-input.input-wrapper.required
-				input(placeholder="Email" required)
+				input(placeholder="Email" type="email" required pattern="^[a-zA-Z0-9.!#$%&’*+=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$")
 			.ui-input.input-wrapper.required
-				input(placeholder="Номер телефона" required)
+				input(placeholder="Номер телефона" type="tel" required pattern="([(+]*[0-9]+[()+. -]*)")
 			.ui-input.input-wrapper
 				input(placeholder="Бюджет")
 			.ui-input.input-wrapper.required
-				textarea(placeholder="Номер телефона" rows="4" required)
+				textarea(placeholder="Ваше сообщение" rows="4" required)
 
-			.submit-btn.chamber(data-first-text="Chamber" data-last-text="Done!") Отправить
+			button.submit-btn.chamber(data-first-text="Chamber" data-last-text="Done!") Отправить
 			br
 			br
 			.submit-btn.pop-up(data-first-text="Pop up" data-last-text="Done!") Отправить
