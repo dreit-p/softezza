@@ -1,0 +1,46 @@
+-
+	var techs = [
+		{
+			name: "Laravel",
+			image: "../assets/images/laravel.svg",
+		},
+		{
+			name: "React.js",
+			image: "../assets/images/react.svg",
+		},
+		{
+			name: "Vue.js",
+			image: "../assets/images/vue.svg",
+		},
+		{
+			name: "Symfony",
+			image: "../assets/images/symfony.svg",
+		},
+		{
+			name: "HTML5",
+			image: "../assets/images/html.svg",
+		},
+		{
+			name: "SQL",
+			image: "../assets/images/sql.svg",
+		},
+		{
+			name: "AWS",
+			image: "../assets/images/aws.svg",
+		},
+		{
+			name: "Django",
+			image: "../assets/images/django.svg",
+		},
+	]
+
+section.techs
+	.limit
+		.section-title Технологии
+
+		.list-wrapper
+			each tech in techs
+				.technology
+					.technology-image
+						img(src=tech.image alt=tech.name)
+					.technology-name!= tech.name
