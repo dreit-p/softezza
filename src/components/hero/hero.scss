@@ -5,20 +5,27 @@ section.main-hero {
 	background-image: url(../assets/svg/arrow-down.svg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-position: center calc(100% - 30px);
+	background-position: center calc(100% - 60px);
 	box-shadow: inset 0 -20px 20px white;
-	padding: 7.2508vw *;
+	--arrow-outer-visibility: 7.5508vw;
+	--margin-bottom: 0px;
+	padding-top: 7.2508vw;
+	padding-bottom: var(--arrow-outer-visibility);
+	margin-bottom: calc(0px - var(--arrow-outer-visibility) + var(--margin-bottom));
 	@media (min-width: 1655px) {
-		padding: 120px *;
+		--arrow-outer-visibility: 120px;
+		padding-top: 120px;
 	}
 	@media (max-width: 950px) {
+		--arrow-outer-visibility: 100px;
+		--margin-bottom: calc(185-88px);
 		background-attachment: scroll;
-		background-position: center calc(100% - 130px);
-		padding: 19.2vw * 200px;
+		background-position: center calc(100% - (var(--arrow-outer-visibility) - 70px) );
+		padding-top: 19.2vw;
 	}
 	@media (max-width: 475px) {
-		background-position: center calc(100% - 30.9333vw);
-		padding: 19.2vw * 49.3333vw;
+		--margin-bottom: 25.8667vw;
+		padding-top: 19.2vw;
 	}
 	.limit {
 		--max-width: 1655px;
