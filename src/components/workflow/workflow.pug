@@ -1,0 +1,60 @@
+-
+	var steps = [
+		{
+			title: "Проведение Брифинга",
+			image: "../assets/images/dialog.svg",
+			description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard.",
+			position: {
+				top: '29.5%',
+				left: '2%',
+			}
+		},
+		{
+			title: "Разработка",
+			image: "../assets/images/develop.svg",
+			description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever",
+			position: {
+				top: '-6%',
+				left: '51%',
+			}
+		},
+		{
+			title: "Тестирование",
+			image: "../assets/images/test.svg",
+			description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.",
+			position: {
+				top: '29.5%',
+				left: '98%',
+			}
+		},
+		{
+			title: "Сдача Проекта",
+			image: "../assets/images/cooperation.svg",
+			description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text.",
+			position: {
+				top: '84%',
+				left: '82%',
+			}
+		},
+		{
+			title: "Поддержка",
+			image: "../assets/images/support.svg",
+			description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown.",
+			position: {
+				top: '84%',
+				left: '15%',
+			}
+		},
+	]
+
+article.workflow
+	.limit
+		.section-title Как мы работаем
+
+		.steps-wrapper
+			each step in steps
+				.step(style=`top:${step.position.top};left:${step.position.left};`)
+					.step-image
+						img(src=step.image)
+					.step-title!= step.title
+					.step-description!= step.description
