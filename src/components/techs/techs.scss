@@ -1,4 +1,10 @@
 section.techs {
+	@media (min-width: 650px) {
+		margin-bottom: 30px;
+	}
+	@media (min-width: 950px) {
+		margin-bottom: 56px;
+	}
 	.list-wrapper {
 		display: grid;
 		justify-items: center;
