@@ -1,4 +1,10 @@
 article.possibilities {
+	@media (min-width: 650px) {
+		margin-bottom: 50px;
+	}
+		@media (min-width: 950px) {
+		margin-bottom: 116px;
+	}
 	.list-wrapper {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
