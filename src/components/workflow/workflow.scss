@@ -19,7 +19,8 @@ article.workflow {
 		background-repeat: no-repeat;
 		@media (max-width: 950px) {
 			display: flex;
-			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: center;
 			align-items: center;
 			background-image: none;
 			margin: 0;
@@ -28,6 +29,10 @@ article.workflow {
 			width: auto;
 			height: auto;
 			margin-bottom: 48px;
+		}
+		@media (max-width: 700px) {
+			flex-direction: column;
+			flex-wrap: nowrap;
 		}
 	}
 	.step {
@@ -39,6 +44,7 @@ article.workflow {
 		width: 100%;
 		@media (max-width: 950px) {
 			margin-bottom: 56px;
+			margin: * 2vw;
 		}
 		&-image {
 			max-height: 96px;
