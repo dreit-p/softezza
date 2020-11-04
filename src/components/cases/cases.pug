@@ -1,0 +1,29 @@
+-
+	var cases = [
+		{
+			name: "Bizpay",
+			image: "../assets/images/cases/bizpay",
+			url: "#"
+		},
+		{
+			name: " Stream service API",
+			image: "../assets/images/cases/stream_api",
+			url: "#"
+		},
+		{
+			name: "Realty СRM",
+			image: "../assets/images/cases/reality_crm",
+			url: "#"
+		},
+	]
+
+article.cases
+	.limit
+		.section-title Работы
+
+		.list-wrapper
+			each work in cases
+				.case
+					.case-image
+						img(srcset=`${work.image}@2.jpg 2x` src=`${work.image}.jpg`, alt=work.name)
+					a.case-name(href=work.url)!= work.name
