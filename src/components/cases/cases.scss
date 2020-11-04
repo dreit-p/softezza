@@ -10,10 +10,6 @@ article.cases {
 		flex-wrap: wrap;
 		margin: -20px *;
 		justify-content: space-around;
-		@media (max-width: 950px) {
-		}
-		@media (max-width: 650px) {
-		}
 	}
 	.case {
 		display: flex;
@@ -21,6 +17,9 @@ article.cases {
 		margin: 20px 25px;
 		height: 380px;
 		width: 300px;
+		@media (max-width: 950px) {
+			margin: 5vw *;
+		}
 		@media (max-width: 650px) {
 			margin: * 0;
 			height: 100%;
