@@ -111,19 +111,18 @@ var notifyTemplate = notify.onError({
 
 function css() {
 	return src(path.src.css)
-		.pipe(postcss([
-				postCssImport({
-					root: "src/css",
-					path: ["../css", "../css/components", "../css/data"]
-				})
-			]), {syntax: scss})
-		.pipe(cache('css'))
 		.pipe(plumber({
 			errorHandler: notifyTemplate
 		}))
 		.pipe( gulpif(process.env.NODE_ENV == 'development', sourcemaps.init() ) )
 		// .pipe(notify("» css <%= file.relative %>"))
-		.pipe(sourcemaps.init())
+		.pipe(postcss([
+			postCssImport({
+				root: "src/css",
+				path: ["../css", "../css/components", "../css/data"]
+			})
+		]), {syntax: scss})
+		.pipe(cache('css'))
 		.pipe(postcss(processors, {syntax: scss}))
 		.pipe(rename({ extname: ".css" }))
 		.pipe( gulpif(process.env.NODE_ENV == 'development', sourcemaps.write() ) )
