@@ -14,30 +14,26 @@ article.cases {
 		}
 		@media (max-width: 650px) {
 		}
-		&:after {
-			content: '';
-			width: 300px;
-		}
 	}
 	.case {
 		display: flex;
 		flex-direction: column;
-		margin: 20px 10px;
+		margin: 20px 25px;
+		height: 380px;
+		width: 300px;
 		@media (max-width: 650px) {
 			margin: * 0;
+			height: 100%;
+			width: 100%;
+			max-height: 380px;
+			max-width: 300px;
 		}
 		&-image {
 			display: flex;
+			flex-grow: 1;
+			width: 100%;
 			justify-content: center;
 			align-items: center;
-			height: 320px;
-			width: 300px;
-			@media (max-width: 650px) {
-				height: 100%;
-				width: 100%;
-				max-height: 320px;
-				max-width: 300px;
-			}
 			img {
 				width: 100%;
 				height: 100%;
@@ -49,6 +45,12 @@ article.cases {
 			margin: 18px 0;
 			font-weight: 700;
 			text-decoration: none;
+		}
+		&.pseudo {
+			margin: 0 *;
+			height: 0;
+			max-height: 0;
+			padding: 0;
 		}
 	}
 }
