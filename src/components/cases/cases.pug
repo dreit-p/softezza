@@ -3,16 +3,19 @@
 		{
 			name: "Bizpay",
 			image: "../assets/images/cases/bizpay",
+			description: "API позволяющий интегрировать покупку товара пользователями в рассрочку. Взаимодействует с различными платежными системами используя подписки, рассрочку и другие ценовые модели.",
 			url: "#"
 		},
 		{
 			name: " Stream service API",
 			image: "../assets/images/cases/stream_api",
+			description: "Отказоустойчивое API для поддержки высоконагруженных видеосервисов. Бэкэнд для различных клиентских приложений, в том числе: IOS, Android, SmartTV и другие.",
 			url: "#"
 		},
 		{
 			name: "Realty СRM",
 			image: "../assets/images/cases/reality_crm",
+			description: "Система управления для компаний по продаже недвижимости, позволяющая упростить бизнес процессы связанные с менеджментом покупателей и объектов недвижимости.",
 			url: "#"
 		},
 	]
@@ -24,8 +27,10 @@ article.cases
 		.list-wrapper
 			each work in cases
 				.case
-					.case-image
-						img(srcset=`${work.image}@2.jpg 2x` src=`${work.image}.jpg`, alt=work.name)
+					.top-part
+						.case-image
+							img(srcset=`${work.image}@2.jpg 2x` src=`${work.image}.jpg`, alt=work.name)
+						.description!= work.description
 					a.case-name(href=work.url)!= work.name
 
 			.case.pseudo
