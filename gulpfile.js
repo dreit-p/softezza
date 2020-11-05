@@ -6,6 +6,7 @@
 const envVars = {
 	development: {
 		API_HOST: '',
+		// USE_LOCALHOST: true,
 	},
 	production: {
 		API_HOST: '',
@@ -274,8 +275,9 @@ function getNetworkIP(callback) {
 
 function server() {
 	getNetworkIP(function (error, ip) {
-		if (error) {
-			console.log('error:', error);
+		if (error || process.env.USE_LOCALHOST) {
+			if (process.env.USE_LOCALHOST) console.log('process.env.USE_LOCALHOST: ', process.env.USE_LOCALHOST);
+			if (error) console.log('error:', error);
 			ip = '127.0.0.1';
 			console.log('Used Local IP:');
 		} else {
