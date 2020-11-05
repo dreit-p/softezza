@@ -63,15 +63,16 @@ section.main-hero {
 				margin: * 80px;
 				background-color: white;
 			}
-		}
-	}
-	img.illustration {
-		width: 100%;
-		max-width: 760px;
-		max-height: 680px;
-		@media (max-width: 950px) {
-			min-width: 330px;
-			max-width: 600px;
+			picture,
+			img {
+				width: 100%;
+				max-width: 760px;
+				max-height: 680px;
+				@media (max-width: 950px) {
+					min-width: 330px;
+					max-width: 600px;
+				}
+			}
 		}
 	}
 	.title {
