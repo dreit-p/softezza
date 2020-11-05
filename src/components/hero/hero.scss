@@ -90,6 +90,7 @@ section.main-hero {
 	.caption {
 		font-size: 21px;
 		letter-spacing: 0.2px;
+		max-width: 420px;
 		margin: 20px *;
 		color: var(--text-blue);
 		@media (max-width: 950px) {
