@@ -1,2 +1,88 @@
+-
+	var addresses = [
+		{
+			city: 'Ростов-на-Дону',
+			phone: '+7 863 123 45 67',
+			email: 'mail@softezza.ru',
+			location: 'Ростов-на-Дону, 14-я&nbsp;линия, 50, офис.&nbsp;509',
+		},
+		{
+			city: 'Нью-Йорк',
+			phone: '+1 777 123-45-67',
+			email: 'mail@softezza.ru',
+			location: '123 Mail Street, Suite&nbsp;450, New&nbsp;York, NY 10038',
+		}
+	];
+
+
+	var menu = [
+		{
+			name: "Компания",
+			url: "#"
+		},
+		{
+			name: "О нас",
+			url: "#"
+		},
+		{
+			name: "Услуги",
+			url: "#"
+		},
+		{
+			name: "Контакты",
+			url: "#"
+		},
+	]
+
+	var socials = [
+		{
+			icon: "vko",
+			url: ""
+		},
+		{
+			icon: "twitr",
+			url: ""
+		},
+		{
+			icon: "insta",
+			url: ""
+		},
+		{
+			icon: "facebk",
+			url: ""
+		}
+	];
+
 footer.main-footer
 	.limit
+		.grid
+			.left
+				.addresses
+					each address in addresses
+						.address
+							.title!=address.city
+							.address-text
+								p!=address.phone
+								p!=address.email
+								p!=address.location
+			.middle
+				.title Меню
+				.menu-links
+					each link in menu
+						a.menu-link(href=link.url)!= link.name
+
+			.right
+				.right-content
+					.message Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+					.socials
+						each link in socials
+							a.socials-link(href=link.url target="_BLANK" rel="noopener noreferrer")
+								svg
+									use(href=`#${link.icon}`)
+					hr
+					a.terms(href="#") Политика конфиденциальности
+					a.terms(href="#") Условия и положения
+
+
+
+		.copyright © 2020 SOFTEZZA

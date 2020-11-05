@@ -16,7 +16,7 @@ i {
 	width: 100%;
 	position: relative;
 	@media (max-width: 570px) {
-		--offset: 32px;
+		--offset: 24px;
 	}
 	&.wide {
 		max-width: calc(1660px + var(--offset)*2);
