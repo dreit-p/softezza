@@ -34,7 +34,10 @@ section.main-hero {
 		align-items: stretch;
 		flex-direction: row-reverse;
 		@media (min-width: 951px) {
-			--offset: 80px;
+			--offset: 6.25vw;
+		}
+		@media (min-width: 1920px) {
+			--offset: 120px;
 		}
 		@media (max-width: 950px) {
 			flex-direction: column;
