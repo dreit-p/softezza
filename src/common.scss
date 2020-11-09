@@ -8,15 +8,21 @@ i {
 }
 
 .limit {
-	--offset: 40px;
+	--offset: calc(15.4688vw + 15.5% - 297px);
 	--max-width: 1374px;
 	max-width: calc(var(--max-width) + var(--offset)*2);
 	padding: 0 var(--offset);
 	margin: auto;
 	width: 100%;
 	position: relative;
-	@media (max-width: 570px) {
-		--offset: 30px;
+	@media (min-width: 1920px) {
+		--offset: 297px;
+	}
+	@media (max-width: 1050px) {
+		--offset: 40px;
+	}
+	@media (max-width: 578px) {
+		--offset: 15px;
 	}
 	&.wide {
 		max-width: calc(1660px + var(--offset)*2);
