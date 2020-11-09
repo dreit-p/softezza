@@ -14,11 +14,11 @@ article.possibilities {
 		@media (min-width: 1374px) {
 			row-gap: 150px;
 		}
-		@media (max-width: 950px) {
+		@media (max-width: 1150px) {
 			grid-template-columns: 1fr 1fr;
 			column-gap: 30px;
 		}
-		@media (max-width: 650px) {
+		@media (max-width: 578px) {
 			row-gap: 4.2667vw; /* 16px/375px*100 */
 			grid-template-columns: auto;
 			justify-content: center;
