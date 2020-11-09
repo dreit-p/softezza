@@ -1,7 +1,7 @@
 body {
-	--header-offset: 140px;
+	--header-offset: 98px;
 	@media (max-width: 950px) {
-		--header-offset: 105px;
+		--header-offset: 80px;
 	}
 }
 
@@ -20,26 +20,21 @@ header.main-header {
 	right: 0;
 	width: 100%;
 	z-index: 20;
-	transition: height .2s;
 	background-color: white;
 	&.unsticked {
 		box-shadow: 2px 4px 16px 0 rgba(64, 64, 64, 0.16);
-		height: 98px;
-	}
-	@media (max-width: 950px) {
-		height: 105px;
-		&.unsticked {
-			height: 80px;
-		}
 	}
 	.limit {
 		--max-width: 1775px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		--offset: 24px;
+		--offset: 30px;
+		@media (max-width: 578px) {
+			--offset: 24px;
+		}
 		@media (min-width: 1250px) {
-			--offset: 30px;
+			--offset: 40px;
 		}
 	}
 	.logo {
@@ -48,7 +43,7 @@ header.main-header {
 		margin-right: 20px;
 		@media (max-width: 950px) {
 			flex-basis: 47vw;
-			min-width: 205px;
+			max-width: 205px;
 		}
 
 		.img {
@@ -97,7 +92,7 @@ header.main-header {
 		flex-shrink: 0;
 		width: 60px;
 		height: 60px;
-		margin-right: -10px;
+		margin-right: -15px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
