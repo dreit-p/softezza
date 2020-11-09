@@ -11,7 +11,7 @@ article.workflow {
 		}
 		max-width: 965px;
 		width: auto;
-		height: 59.5342vw; /*818/1374*100*/
+		height: 50vw;
 		max-height: 818px;
 		background-image: url(../assets/images/workflow-bg.svg);
 		background-position: center center;
@@ -71,6 +71,23 @@ article.workflow {
 		@media (min-width: 951px) {
 			position: absolute;
 			transform: translateX(-50%);
+		}
+	}
+	.rocket {
+		height: 200px;
+		max-width: 200px;
+		width: 10.4167vw;
+		background-image: url(../assets/images/launch.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center center;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 45%;
+		margin: auto;
+		@media (max-width: 950px) {
+			display: none;
 		}
 	}
 }
