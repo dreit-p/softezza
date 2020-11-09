@@ -1,7 +1,7 @@
 body {
-	--header-offset: 98px;
-	@media (max-width: 950px) {
-		--header-offset: 80px;
+	--header-offset: 80px;
+	@media (max-width: 578px) {
+		--header-offset: 68px;
 	}
 }
 
@@ -13,6 +13,7 @@ header.main-header {
 	display: flex;
 	align-items: center;
 	padding-right: inherit;
+	padding-top: 23px;
 	position: fixed;
 	height: var(--header-offset);
 	top: 0;
@@ -29,12 +30,15 @@ header.main-header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		--offset: 30px;
+		--offset: 4.5833vw;
+		@media (min-width: 1920px) {
+			--offset: 88px;
+		}
+		@media (max-width: 768px) {
+			--offset: 30px;
+		}
 		@media (max-width: 578px) {
 			--offset: 24px;
-		}
-		@media (min-width: 1250px) {
-			--offset: 40px;
 		}
 	}
 	.logo {
@@ -43,7 +47,11 @@ header.main-header {
 		margin-right: 20px;
 		@media (max-width: 950px) {
 			flex-basis: 47vw;
-			max-width: 205px;
+			max-width: 280px;
+		}
+		@media (max-width: 578px) {
+			flex-basis: 47vw;
+			max-width: 178px;
 		}
 
 		.img {
@@ -91,7 +99,7 @@ header.main-header {
 	.menu-btn {
 		flex-shrink: 0;
 		width: 60px;
-		height: 60px;
+		height: 100%;
 		margin-right: -15px;
 		display: flex;
 		justify-content: center;
