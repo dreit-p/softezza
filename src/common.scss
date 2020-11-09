@@ -8,7 +8,7 @@ i {
 }
 
 .limit {
-	--offset: 20px;
+	--offset: 40px;
 	--max-width: 1374px;
 	max-width: calc(var(--max-width) + var(--offset)*2);
 	padding: 0 var(--offset);
@@ -16,7 +16,7 @@ i {
 	width: 100%;
 	position: relative;
 	@media (max-width: 570px) {
-		--offset: 24px;
+		--offset: 30px;
 	}
 	&.wide {
 		max-width: calc(1660px + var(--offset)*2);
