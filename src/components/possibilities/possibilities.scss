@@ -9,17 +9,17 @@ article.possibilities {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: auto;
-		column-gap: 20px;
-		row-gap: 10.917vw; /* 150/1374*100 */
-		@media (min-width: 1374px) {
-			row-gap: 150px;
+		column-gap: 24px;
+		row-gap: 24px;
+		@media (hover: hover) and (pointer: fine) {
+			margin: -32px -24px;
 		}
 		@media (max-width: 950px) {
 			grid-template-columns: 1fr 1fr;
 			column-gap: 30px;
+			margin: * 0;
 		}
-		@media (max-width: 650px) {
-			row-gap: 4.2667vw; /* 16px/375px*100 */
+		@media (max-width: 578px) {
 			grid-template-columns: auto;
 			justify-content: center;
 			align-content: center;
@@ -27,11 +27,31 @@ article.possibilities {
 	}
 	.category {
 		max-width: 430px;
+		position: relative;
+		color: var(--text-blue);
+		min-height: 25vw; /*337/1346*100*/
+		border-radius: 5px;
+		text-decoration: none;
+		transition-timing-function: ease-in;
+		transition: background-color .2s, color .2s;
+		@media (hover: hover) and (pointer: fine) {
+			padding: 32px 24px;
+			padding-bottom: calc(32px + 1rem);
+			&:hover {
+				color: white;
+				background-color: #7364A8;
+				.know-more {
+					opacity: 1;
+				}
+			}
+		}
+		@media (min-width: 1346px) {
+			min-height: 337px;
+		}
 		&-name {
 			font-size: 32px;
 			font-weight: bold;
 			letter-spacing: 0.5px;
-			color: var(--text-blue);
 			@media (max-width: 950px) {
 				font-size: 21px;
 			}
@@ -42,7 +62,6 @@ article.possibilities {
 			padding-left: 16px;
 			li {
 				font-size: 18px;
-				color: var(--text-blue);
 				line-height: 1.4;
 				list-style: none;
 				margin: 12px 0;
@@ -50,17 +69,29 @@ article.possibilities {
 				&:before {
 					content: '';
 					position: absolute;
-					top: 0;
+					top: 0.45rem;
 					left: -16px;
-					bottom: 0;
 					margin: auto;
 					display: block;
 					width: 8px;
 					height: 8px;
 					border-radius: 50%;
-					background-color: #7364a8;
+					background-color: currentColor;
 				}
 			}
+		}
+		.know-more {
+			position: absolute;
+			bottom: 32px;
+			left: 24px;
+			font-weight: bold;
+			font-size: 19px;
+			height: 1rem;
+			text-decoration: underline;
+			transition-timing-function: ease-in;
+			transition: opacity .2s;
+			opacity: 0;
+			overflow: hidden;
 		}
 	}
 }

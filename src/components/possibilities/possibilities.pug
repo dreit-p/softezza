@@ -28,9 +28,14 @@ article.possibilities
 
 		.list-wrapper
 			each category in possibilities
-				.category
+				a.category(href="#")
 					.category-name!= category.name
 
 					ul.list
 						each listItem in category.list
 							li!= listItem
+
+					.know-more
+						| Узнать больше
+						svg.arrow
+							use(href="#arrow-right")
