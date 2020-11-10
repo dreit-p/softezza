@@ -29,6 +29,7 @@
 	height: 100%;
 	@media (max-width: 600px) {
 		max-height: none;
+		padding-top: 28px;
 	}
 	.menu-items {
 		display: flex;
@@ -49,6 +50,7 @@
 		margin: 0 20px;
 		@media (max-width: 600px) {
 			margin: 0;
+			text-align: center;
 		}
 		&-name {
 			letter-spacing: 0.5px;
@@ -59,7 +61,8 @@
 			margin: 1.25rem 0;
 			display: inline-block;
 			@media (max-width: 600px) {
-				font-size: 28px;
+				font-size: 21px;
+				margin: 16px 0;
 			}
 		}
 		.list {
@@ -77,6 +80,10 @@
 				text-decoration: none;
 				padding: 6px 0;
 				margin: 6px 0;
+				@media (max-width: 600px) {
+					margin: 4.5px;
+					padding: 4.5px;
+				}
 				@media (hover: hover) and (pointer: fine) {
 					&:hover {
 						text-decoration: underline;
@@ -94,6 +101,16 @@
 			margin: 48px 20px;
 			font-weight: bold;
 			text-align: center;
+			@media (max-width: 600px) {
+				margin: 23px *;
+				font-size: 21px;
+			}
+		}
+		.sliding-btn {
+			@media (max-width: 600px) {
+				font-size: 18px;
+				padding: 20px 32px;
+			}
 		}
 	}
 }
