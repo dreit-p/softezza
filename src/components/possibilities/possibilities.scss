@@ -1,9 +1,11 @@
 article.possibilities {
-	@media (min-width: 650px) {
-		margin-bottom: 50px;
-	}
+	@media (hover: hover) and (pointer: fine) {
+		@media (min-width: 650px) {
+			margin-bottom: 50px;
+		}
 		@media (min-width: 950px) {
-		margin-bottom: 116px;
+			margin-bottom: 116px;
+		}
 	}
 	.list-wrapper {
 		display: grid;
