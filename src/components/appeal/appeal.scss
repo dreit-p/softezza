@@ -31,6 +31,7 @@ article.appeal {
 		white-space: nowrap;
 		@media (max-width: 650px) {
 			font-size: 8.5333vw; /*32/375*100*/
+			padding: 8px;
 		}
 		&:after {
 			content: '';
