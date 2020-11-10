@@ -22,9 +22,15 @@ article.techs {
 		@media (max-width: 650px) {
 			grid-template-columns: auto auto;
 			margin: * 30px;
+			>* {
+				max-width: 240px;
+			}
 		}
 		@media (max-width: 475px) {
 			margin: 0;
+			>* {
+				max-width: 160px;
+			}
 		}
 	}
 	.technology {
