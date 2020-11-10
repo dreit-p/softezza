@@ -70,6 +70,9 @@ footer.main-footer
 				.menu-links
 					each link in menu
 						a.menu-link(href=link.url)!= link.name
+							.arrow
+								svg
+									use(href="#arrow")
 
 			.right
 				.right-content
