@@ -35,7 +35,7 @@ article.possibilities {
 		border-radius: 5px;
 		text-decoration: none;
 		transition-timing-function: ease-in;
-		transition: background-color .2s, color .2s;
+		transition: background-color .1s, color .1s;
 		@media (hover: hover) and (pointer: fine) {
 			padding: 32px 24px;
 			padding-bottom: calc(32px + 1rem);
@@ -44,6 +44,8 @@ article.possibilities {
 				background-color: #7364A8;
 				.know-more {
 					opacity: 1;
+					transition-delay: .2s;
+					transition-duration: .4s;
 				}
 			}
 		}
@@ -91,6 +93,7 @@ article.possibilities {
 			height: 1rem;
 			transition-timing-function: ease-in;
 			transition: opacity .2s;
+			transition-delay: 0s;
 			opacity: 0;
 			&:after {
 				content: '';
