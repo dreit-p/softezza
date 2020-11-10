@@ -17,16 +17,16 @@
 
 	var menu = [
 		{
-			name: "Компания",
-			url: "#"
+			name: "Наша команда",
+			url: "#our-team"
 		},
 		{
-			name: "О нас",
+			name: "Получить бриф",
 			url: "#"
 		},
 		{
 			name: "Услуги",
-			url: "#"
+			url: "#services"
 		},
 		{
 			name: "Контакты",
@@ -57,7 +57,7 @@ footer.main-footer
 	.limit
 		.grid
 			.left
-				.addresses
+				#contacts.addresses
 					each address in addresses
 						.address
 							.title!=address.city
@@ -65,7 +65,7 @@ footer.main-footer
 								p!=address.phone
 								p!=address.email
 								p!=address.location
-			.middle
+			//- .middle
 				.title Меню
 				.menu-links
 					each link in menu

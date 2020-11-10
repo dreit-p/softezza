@@ -48,6 +48,11 @@ i {
 	transition: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	scroll-margin-top: calc(var(--header-offset) + .3em);
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 body {

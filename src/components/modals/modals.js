@@ -15,18 +15,22 @@
 		activator.addEventListener('click', (e)=>{
 			e.preventDefault();
 			let modalType = e.currentTarget.dataset.openModal;
-			if (body.classList.contains('show-modal')) {
-				if (!document.getElementById(modalType).classList.contains('active')) {
-					hideModal();
-					showModal(modalType)
-				} else {
-					hideModal();
-				}
-			} else {
-				showModal(modalType);
-			}
+			openModal(modalType);
 		}, false);
 	});
+
+	function openModal(modalType) {
+		if (body.classList.contains('show-modal')) {
+			if (!document.getElementById(modalType).classList.contains('active')) {
+				hideModal();
+				showModal(modalType)
+			} else {
+				hideModal();
+			}
+		} else {
+			showModal(modalType);
+		}
+	}
 
 	function hideModal() {
 		modalWrapper.dispatchEvent(new CustomEvent('hideModal', {bubbles: true}));
@@ -61,7 +65,7 @@
 
 
 	window.closeModals = hideModal;
-	window.openModal = showModal;
+	window.openModal = openModal;
 
 	document.addEventListener('keyup', function (e) {
 		if (e.key === "Escape" && body.classList.contains('show-modal')) {
@@ -69,3 +73,33 @@
 		}
 	}, false);
 })()
+
+
+/*=======================================
+=            open form modal            =
+=======================================*/
+
+document.querySelectorAll('a[href*="open-form"]').forEach(function(btn) {
+	btn.addEventListener('click', function (e) {
+		e.preventDefault();
+		window.openModal("feedback-modal");
+	}, false);
+});
+
+/*=====  End of open form modal  ======*/
+
+
+/*====================================================
+=            mobile menu links behavior             =
+====================================================*/
+
+document.querySelectorAll('#menu-modal a[href^="#"]').forEach(function(btn) {
+	btn.addEventListener('click', function () {
+		let anchor = btn.href.substring(btn.href.indexOf("#")+1);
+		if (document.getElementById(anchor)) {
+			window.closeModals();
+		}
+	}, false);
+});
+
+/*=====  End of mobile menu links behavior   ======*/
