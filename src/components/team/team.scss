@@ -27,27 +27,31 @@ article.team {
 	.person {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		&-image {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			img {
-				height: 178px;
-				width: 178px;
-				@media (max-width: 650px) {
-					height: 30vw; /* 115/375*100 */
-					width: 30vw;
-				}
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center 60%;
+			height: 160px;
+			width: 160px;
+			border-radius: 50%;
+			overflow: hidden;
+			box-shadow: 0px 3px 6px #00000029;
+			@media (max-width: 650px) {
+				height: 27.7333vw; /* 104/375*100 */
+				width: 27.7333vw;
+				min-height: 104px;
+				min-width: 104px;
 			}
 		}
 		&-name {
 			font-size: 21px;
 			color: var(--text-blue);
-			margin: 17px 10px 8px;
+			margin: 32px -10% 8px;
 			font-weight: 700;
 			@media (max-width: 650px) {
 				font-size: 19px;
-				margin: 5px 10px 8px;
+				margin: 16px -10% 8px;
 			}
 		}
 		&-position {
