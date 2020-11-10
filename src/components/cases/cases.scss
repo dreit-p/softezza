@@ -62,26 +62,14 @@ article.cases {
 				opacity: 0;
 				transition: transform .4s, opacity .4s;
 			}
-			@media (min-width: 951px) and (hover: hover) and (pointer: fine) {
-				&:hover {
-					.description {
-						opacity: 1;
-						transition-duration: .3s;
-					}
-					&:before {
-						opacity: 1;
-						transition-duration: .2s;
-						transform: translateY(0px);
-					}
-				}
-			}
-			@media (max-width: 950px) {
+			&:hover {
 				.description {
 					opacity: 1;
+					transition-duration: .3s;
 				}
 				&:before {
-					opacity: 0.7;
-					transition: none;
+					opacity: 1;
+					transition-duration: .2s;
 					transform: translateY(0px);
 				}
 			}
