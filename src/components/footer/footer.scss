@@ -140,10 +140,12 @@ footer.main-footer {
 					transform: rotate(-90deg) translateX(70%);
 				}
 			}
-			&:hover {
-				color: hsl(281 70% 70% / 1);
-				.arrow {
-					transform: translateX(5px);
+			@media (hover: hover) and (pointer: fine) {
+				&:hover {
+					color: hsl(281 70% 70% / 1);
+					.arrow {
+						transform: translateX(5px);
+					}
 				}
 			}
 		}
@@ -181,8 +183,10 @@ footer.main-footer {
 						width: 30px;
 						height: 30px;
 					}
-					&:hover {
-						color: hsl(281 70% 70% / 1);
+					@media (hover: hover) and (pointer: fine) {
+						&:hover {
+							color: hsl(281 70% 70% / 1);
+						}
 					}
 				}
 			}

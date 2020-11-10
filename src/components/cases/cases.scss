@@ -62,7 +62,7 @@ article.cases {
 				opacity: 0;
 				transition: transform .4s, opacity .4s;
 			}
-			@media (min-width: 951px) {
+			@media (min-width: 951px) and (hover: hover) and (pointer: fine) {
 				&:hover {
 					.description {
 						opacity: 1;
