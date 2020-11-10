@@ -5,16 +5,9 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/dreit-p/soundstage.git"
-	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/dreit-p/soundstage/issues"
-	},
 	"browserslist": [
 		"last 2 Chrome versions",
 		"last 7 Firefox versions",
@@ -23,7 +16,6 @@
 		"Edge 16",
 		"last 5 iOS versions"
 	],
-	"homepage": "https://www.soundstage.fm/",
 	"description": "",
 	"devDependencies": {
 		"@babel/core": "^7.7.0",

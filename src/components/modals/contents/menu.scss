@@ -77,8 +77,10 @@
 				text-decoration: none;
 				padding: 6px 0;
 				margin: 6px 0;
-				&:hover {
-					text-decoration: underline;
+				@media (hover: hover) and (pointer: fine) {
+					&:hover {
+						text-decoration: underline;
+					}
 				}
 			}
 		}

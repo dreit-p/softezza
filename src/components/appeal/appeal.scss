@@ -48,10 +48,12 @@ article.appeal {
 			transform: translateY(calc(100% - 4px));
 			transition: transform .3s;
 		}
-		&:hover {
-			&:after {
-				transition-duration: .2s;
-				transform: translateY(0px);
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				&:after {
+					transition-duration: .2s;
+					transform: translateY(0px);
+				}
 			}
 		}
 	}
