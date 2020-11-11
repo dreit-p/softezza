@@ -84,6 +84,7 @@ section.main-hero {
 		color: var(--text-blue);
 		font-weight: 900;
 		margin: 20px *;
+		text-shadow: 0px 1px 1px #40404014;
 		@media (max-width: 950px) {
 			font-size: 70px;
 		}
@@ -97,6 +98,7 @@ section.main-hero {
 		max-width: 420px;
 		margin: 20px *;
 		color: var(--text-blue);
+		text-shadow: 0px 1px 1px #40404014;
 		@media (max-width: 950px) {
 			font-size: 26px;
 		}

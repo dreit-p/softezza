@@ -55,6 +55,7 @@
 		&-name {
 			letter-spacing: 0.5px;
 			font-size: 32px;
+			text-shadow: 0px 1px 1px #40404015;
 			line-height: 1.32;
 			font-weight: bold;
 			text-decoration: none;
@@ -77,6 +78,7 @@
 			}
 			a {
 				display: inline-block;
+				text-shadow: 0px 1px 1px #40404015;
 				text-decoration: none;
 				padding: 6px 0;
 				margin: 6px 0;
@@ -102,6 +104,7 @@
 			margin: 48px 20px;
 			font-weight: bold;
 			text-align: center;
+			text-shadow: 0px 1px 1px #40404015;
 			@media (max-width: 600px) {
 				margin: 23px *;
 				font-size: 21px;

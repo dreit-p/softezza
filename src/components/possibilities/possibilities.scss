@@ -49,6 +49,7 @@ article.possibilities {
 			font-size: 32px;
 			font-weight: bold;
 			letter-spacing: 0.5px;
+			text-shadow: 0px 1px 1px #40404014;
 			@media (max-width: 950px) {
 				font-size: 21px;
 			}
@@ -60,6 +61,7 @@ article.possibilities {
 			li {
 				font-size: 18px;
 				line-height: 1.4;
+				text-shadow: 0px 1px 1px #40404014;
 				list-style: none;
 				margin: 12px 0;
 				position: relative;
@@ -88,6 +90,7 @@ article.possibilities {
 			transition: opacity .2s;
 			transition-delay: 0s;
 			opacity: 0;
+			text-shadow: 0px 1px 1px #40404014;
 			&:after {
 				content: '';
 				display: block;
