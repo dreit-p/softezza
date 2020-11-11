@@ -101,6 +101,8 @@ section.main-hero {
 		height: 21px;
 		display: block;
 		margin: auto;
+		position: sticky;
+		bottom: 20px;
 		margin-top: 5.6798vw; /*94/1655*100*/
 		margin-bottom: 4.8338vw; /*80/1655*100*/
 		@media (min-width: 1655px) {
