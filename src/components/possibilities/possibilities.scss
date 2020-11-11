@@ -28,6 +28,7 @@ article.possibilities {
 		text-decoration: none;
 		transition-timing-function: ease-in;
 		transition: background-color .1s, color .1s;
+		padding: * 9px;
 		@media (hover: hover) and (pointer: fine) {
 			padding: 32px 24px;
 			padding-bottom: calc(32px + 1rem);
