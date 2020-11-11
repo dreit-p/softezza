@@ -123,7 +123,7 @@ header.main-header {
 		.overflow {
 			position: relative;
 			overflow: hidden;
-			height: 21px;
+			height: 24px;
 			width: 31px;
 		}
 		.lines {
@@ -174,10 +174,10 @@ header.main-header {
 		}
 		.line {
 			&:nth-child(1) {
-				transform: translateY(0) rotate(-30deg);
+				transform: translateY(0) rotate(-32deg);
 			}
 			&:nth-child(2) {
-				transform: translateY(0) rotate(30deg);
+				transform: translateY(0) rotate(32deg);
 			}
 			&:nth-child(3) {
 				opacity: 0;
