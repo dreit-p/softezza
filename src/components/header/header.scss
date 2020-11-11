@@ -147,8 +147,8 @@ header.main-header {
 			bottom: 0;
 			margin: auto;
 			transform-origin: center center;
-			transition: transform .3s, opacity .3s;
-			transition-timing-function: ease-out;
+			transition: transform .2s, opacity .2s;
+			transition-timing-function: ease-in-out;
 			&:nth-child(1) {
 				transform: translateY(-8px);
 			}
@@ -172,8 +172,6 @@ header.main-header {
 			}
 		}
 		.line {
-			transition-duration: .2s;
-			transition-timing-function: ease-in;
 			&:nth-child(1) {
 				transform: translateY(0) rotate(-30deg);
 			}

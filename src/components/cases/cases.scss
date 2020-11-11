@@ -47,6 +47,7 @@ article.cases {
 				font-size: 18px;
 				line-height: 1.4;
 				opacity: 0;
+				transition-timing-function: ease-in-out;
 				transition: opacity .4s;
 			}
 			&:before {
@@ -60,6 +61,7 @@ article.cases {
 				background-color: #9E6EB5;
 				transform: translateY(50%);
 				opacity: 0;
+				transition-timing-function: ease-in-out;
 				transition: transform .4s, opacity .4s;
 			}
 			&:hover {

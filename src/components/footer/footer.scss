@@ -124,6 +124,7 @@ footer.main-footer {
 			padding: 6px *;
 			text-decoration: none;
 			position: relative;
+			transition-timing-function: ease-in-out;
 			transition: color .2s;
 			.arrow {
 				content: '';
