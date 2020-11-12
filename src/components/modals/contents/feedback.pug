@@ -4,20 +4,21 @@
 		.description
 			| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown.
 	.half
-		form.feedback-form
+		form.feedback-form(action="../api/requests")
 			.notice
 				span.icon ❋
 				span.text необходимые поля
 			.ui-input.input-wrapper.required
-				input(placeholder="Ваше имя" required pattern="[A-Za-zА-Яа-я -]+")
+				input(placeholder="Ваше имя" name="name" maxlength="191" required pattern="[A-Za-zА-Яа-я -]+")
 			.ui-input.input-wrapper.required
-				input(placeholder="Email" type="email" required pattern="^[a-zA-Z0-9.!#$%&’*+=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$")
+				input(placeholder="Email" data-required-group="contact" name="email" type="email" maxlength="191" required pattern="^[a-zA-Z0-9.!#$%&’*+=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$")
 			.ui-input.input-wrapper.required
-				input(placeholder="Номер телефона" type="tel" required pattern="([(+]*[0-9]+[()+. -]*)")
+				input(placeholder="Номер телефона" data-required-group="contact" name="phone" type="tel" maxlength="32" required pattern="([(+]*[0-9]+[()+. -]*)")
 			.ui-input.input-wrapper
-				input(placeholder="Бюджет")
+				.input-icon &#8381;
+				input(placeholder="Бюджет" name="budget" type="number" step="0" max="99999999" min="0")
 			.ui-input.input-wrapper.required
-				textarea(placeholder="Ваше сообщение" rows="4" required)
+				textarea(placeholder="Ваше сообщение" name="description" maxlength="8392" rows="4" required)
 
 			button.submit-btn.chamber(data-first-text="Chamber" data-last-text="Done!") Отправить
 			br
