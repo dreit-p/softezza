@@ -56,6 +56,12 @@
 		.submit-btn {
 			min-width: 49%;
 		}
+		&.sent {
+			.input-wrapper {
+				opacity: 0.6;
+				pointer-events: none;
+			}
+		}
 	}
 	.title {
 		font-size: 56px;
