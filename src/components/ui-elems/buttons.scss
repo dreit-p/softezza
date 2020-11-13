@@ -124,13 +124,12 @@
 		}
 	}
 	&.replacement {
-		transition-timing-function: ease-out;
+		transition-timing-function: cubic-bezier(.18,.89,.45,1.36);
 		transition-duration: .8s;
 		&:after {
 			transform: translateY(-200%);
 		}
 		&.done {
-			transition-timing-function: ease-in;
 			&:before {
 				transform: translateY(200%);
 			}
