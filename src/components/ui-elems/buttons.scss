@@ -124,10 +124,13 @@
 		}
 	}
 	&.replacement {
+		transition-timing-function: ease-out;
+		transition-duration: .8s;
 		&:after {
 			transform: translateY(-200%);
 		}
 		&.done {
+			transition-timing-function: ease-in;
 			&:before {
 				transform: translateY(200%);
 			}
