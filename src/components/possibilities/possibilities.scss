@@ -8,12 +8,12 @@ article.possibilities {
 		@media (hover: hover) and (pointer: fine) {
 			margin: -32px -24px;
 		}
-		@media (max-width: 1150px) {
+		@media (max-width: 1380px) {
 			grid-template-columns: 1fr 1fr;
 			column-gap: 30px;
 			margin: * 0;
 		}
-		@media (max-width: 578px) {
+		@media (max-width: 670px) {
 			grid-template-columns: auto;
 			justify-content: center;
 			align-content: center;
