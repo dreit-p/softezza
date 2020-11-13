@@ -1,5 +1,8 @@
 body {
-	--header-offset: 80px;
+	--header-offset: 140px;
+	@media (max-width: 1200px) {
+		--header-offset: 11.6667vw; /*140/1200*100*/
+	}
 	@media (max-width: 578px) {
 		--header-offset: 68px;
 	}
@@ -22,8 +25,29 @@ header.main-header {
 	width: 100%;
 	z-index: 20;
 	background-color: white;
+	@media (max-width: 578px) {
+		padding-top: 37px;
+	}
 	&.unsticked {
+		transition: height .3s ease-out;
 		box-shadow: 2px 4px 16px 0 rgba(64, 64, 64, 0.16);
+		height: 80px;
+		padding-top: 8px;
+		@media (max-width: 1200px) {
+			height: 6.6667vw;
+			min-height: 68px;
+		}
+		@media (max-width: 578px) {
+			padding-top: 23px;
+		}
+		.logo {
+			flex-basis: 47vw;
+			max-width: 326px;
+			@media (max-width: 578px) {
+				flex-basis: 47vw;
+				max-width: 178px;
+			}
+		}
 	}
 	.limit {
 		--max-width: 1775px;
