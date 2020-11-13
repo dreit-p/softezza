@@ -28,7 +28,7 @@ header.main-header {
 	@media (max-width: 578px) {
 		padding-top: 37px;
 	}
-	&.unsticked {
+	&.unstuck {
 		transition: height .3s ease-out;
 		box-shadow: 2px 4px 16px 0 rgba(64, 64, 64, 0.16);
 		height: 80px;

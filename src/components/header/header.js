@@ -4,7 +4,7 @@
 
 	function updateHeaderSticking() {
 		var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-		mainHeader.classList.toggle('unsticked', scrolled > 5);
+		mainHeader.classList.toggle('unstuck', scrolled > 5);
 	}
 
 	window.addEventListener('scroll', function() {
