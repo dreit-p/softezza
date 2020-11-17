@@ -13,6 +13,8 @@ article.team {
 		grid-template-rows: auto;
 		column-gap: 20px;
 		row-gap: 110px;
+		max-width: 1200px;
+		margin: auto;
 		@media (max-width: 950px) {
 			grid-template-columns: 1fr 1fr;
 			margin: * 60px;
