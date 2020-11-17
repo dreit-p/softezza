@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+	head
+		include /components/head/head.pug
+	body
+		div(style="display: none")
+			include /assets/symbol/svg/sprite.symbol.svg
+
+		include /components/header/header.pug
+
+		.content-from-modal
+			.limit
+				include /components/modals/contents/feedback.pug
+
+		include /components/footer/footer.pug
+		include /components/modals/wrapper.pug
+	script(src="js/main.js")
