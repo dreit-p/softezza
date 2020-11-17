@@ -199,7 +199,9 @@ footer.main-footer {
 		}
 		hr {
 			margin: 7px *;
-			border: 0.4px solid white;
+			background-color: white;
+			height: 0.4px;
+			border: none;
 		}
 		a.terms {
 			font-size: 14px;
