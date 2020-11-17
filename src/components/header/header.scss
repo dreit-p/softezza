@@ -1,8 +1,5 @@
 body {
 	--header-offset: 140px;
-	@media (max-width: 1200px) {
-		--header-offset: 11.6667vw; /*140/1200*100*/
-	}
 	@media (max-width: 578px) {
 		--header-offset: 68px;
 	}
@@ -14,28 +11,34 @@ body {
 
 header.main-header {
 	display: flex;
-	align-items: center;
+	align-items: flex-end;
 	padding-right: inherit;
-	padding-top: 23px;
+	padding-top: 67px;
 	position: fixed;
-	height: var(--header-offset);
+	height: calc(var(--header-offset) - 45px);
+	transition-timing-function: ease-in-out;
+	transition-duration: .4s;
+	transition-property: padding-top, padding-bottom, height, box-shadow, margin, width;
 	top: 0;
 	left: 0;
 	right: 0;
 	width: 100%;
 	z-index: 20;
 	background-color: white;
+	@media (max-width: 1200px) {
+		padding-top: 5.5833vw;
+	}
 	@media (max-width: 578px) {
-		padding-top: 37px;
+		transition-property: box-shadow;
+		padding-top: 23px;
+		height: var(--header-offset);
 	}
 	&.unstuck {
-		transition: height .3s ease-out;
 		box-shadow: 2px 4px 16px 0 rgba(64, 64, 64, 0.16);
 		height: 80px;
 		padding-top: 8px;
 		@media (max-width: 1200px) {
-			height: 6.6667vw;
-			min-height: 68px;
+			height: 68px;
 		}
 		@media (max-width: 578px) {
 			padding-top: 23px;
@@ -69,6 +72,9 @@ header.main-header {
 		flex-basis: 380px;
 		max-width: 380px;
 		margin-right: 20px;
+		transition-timing-function: ease-in-out;
+		transition-duration: .4s;
+		transition-property: all;
 		@media (max-width: 950px) {
 			flex-basis: 47vw;
 			max-width: 280px;
@@ -119,6 +125,10 @@ header.main-header {
 			margin: 0 20px;
 			white-space: nowrap;
 			text-shadow: 0px 1px 1px #40404015;
+			&:hover {
+				color: #7364A8;
+				transition: color .1s;
+			}
 		}
 	}
 	.menu-btn {
